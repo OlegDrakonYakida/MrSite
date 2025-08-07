@@ -59,6 +59,11 @@ button:hover {
     transform: scale(1.03);
 }
 
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
 button:active {
     border: rgb(0, 0, 210);
     background-color: rgb(0, 0, 210);
