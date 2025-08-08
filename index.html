@@ -3,6 +3,7 @@
     <head>
         <title>SiteForTG</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -12,11 +13,20 @@
             <h1>Ласкаво просимо до Молодіжної Ради!</h1>
             <div name="inputs">
                 <input id="NameInput" type="text" placeholder="Ваше iм'я" class="inputstyle">
-                <input id="birthdate" type="date" class="inputstyle" style="color: rgb(157, 157, 255)">
-                <input id="MailInput" type="text" placeholder="Почта" class="inputstyle">
+                <input id="birthdate" type="text" placeholder="Дата народження" class="inputstyle" >
+                <input id="MailInput" type="text" placeholder="Пошта" class="inputstyle">
             </div>
             <button id="entb">Надислати данi</button>
         </div>
         <script src="script.js"></script>
+        <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+        <script src="https://npmcdn.com/flatpickr/dist/l10n/ua.js"></script>
+        <script>
+            flatpickr("#birthdate", {
+                "locale": "ua",
+                "dateFormat": "d.m.Y",
+                disableMobile: true
+            })
+        </script>
     </body>
 </html>
