@@ -1,3 +1,3 @@
-# Веб-приложение для телеграмм-бота
+# Веб-приложение для телеграмм-бота Молодёжного совета
 
-<img src="mr.jpg" alt="Скриншот ClockWidget" width="300">
+<img src="img/mr.jpg" alt="Скриншот ClockWidget" width="300">
