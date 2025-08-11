@@ -1,15 +1,15 @@
 let tg = window.Telegram.WebApp;
-let ent = document.getElementById("entb")
-let inp = document.getElementById("NameInput")
-let minp = document.getElementById("MailInput")
-let date = document.getElementById("birthdate")
+let sendDataButton = document.getElementById("sendButton")
+let form = document.getElementById("registration")
 
-
-ent.addEventListener("click", () => {
+sendDataButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    let registrationData = new FormData(form)
     let data = {
-        name: inp.value || "Имя не указано",
-        mail: minp.value || "Почта не указана",
-        date: date.value || "Дата не указана"
+        name: registrationData.get("UserName") || "Имя не указано",
+        mail: registrationData.get("UserBirthday") || "Почта не указана",
+        date: registrationData.get("UserMail") || "Дата не указана",
+        question: registrationData.get("question") || "Ответ не получен"
     }
 
     tg.sendData(JSON.stringify(data))
