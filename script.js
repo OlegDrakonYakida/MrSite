@@ -7,8 +7,8 @@ sendDataButton.addEventListener("click", (e) => {
     let registrationData = new FormData(form)
     let data = {
         name: registrationData.get("UserName") || "Имя не указано",
-        mail: registrationData.get("UserBirthday") || "Почта не указана",
-        date: registrationData.get("UserMail") || "Дата не указана",
+        date: registrationData.get("UserBirthday") || "Почта не указана",
+        mail: registrationData.get("UserMail") || "Дата не указана",
         question: registrationData.get("question") || "Ответ не получен"
     }
 
