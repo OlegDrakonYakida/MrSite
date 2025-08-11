@@ -11,12 +11,25 @@
         <div id="main">
             <img id="Emblem" src="mr.jpg" alt="Эмблема Молодёжной рады">
             <h1>Ласкаво просимо до Молодіжної Ради!</h1>
-            <div name="inputs">
-                <input id="NameInput" type="text" placeholder="Ваше iм'я" class="inputstyle">
-                <input id="birthdate" type="text" placeholder="Дата народження" class="inputstyle" >
-                <input id="MailInput" type="text" placeholder="Пошта" class="inputstyle">
-            </div>
-            <button id="entb">Надислати данi</button>
+            <form id="registration">
+                <input id="NameInput" name="UserName" type="text" placeholder="Ваше П.І.Б" class="inputstyle">
+                <input id="birthdate" name="UserBirthday" type="text" placeholder="Дата народження" class="inputstyle" >
+                <input id="MailInput" name="UserMail" type="text" placeholder="Електрона пошта" class="inputstyle">
+                <fieldset id="inKharkiv">
+                    <label id="contrname" class="textLabel">Ти у Харкові на постійній основі?</label>
+                    <div id="checkbuttons">
+                        <div>
+                            <input id="yes" type="radio" name="question" value="yes" class="yesno"/>
+                            <label for="yes" class="textLabel">Да</label>
+                        </div>
+                        <div>
+                            <input id="no" type="radio" name="question" value="no" class="yesno"/>
+                            <label for="no" class="textLabel">Нет</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <button id="sendButton">Надислати данi</button>
         </div>
         <script src="script.js"></script>
         <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
