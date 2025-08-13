@@ -27,8 +27,8 @@ img[id="Emblem"] {
 
 .inputstyle {
     margin-top: 2ch;
-    border: 2px solid #4000ff;        /* светло-серый бордер */
-    border-radius: 8px;            /* скруглённые углы */
+    border: 2px solid #4000ff;        
+    border-radius: 8px;            
     padding: 12px 16px;
     font-size: 16px;
     width: 100%;
@@ -44,8 +44,8 @@ button[id="sendButton"] {
     margin-top: 3cap;
     color: white;
     background-color: #4000ff;
-    border: 2px solid #4000ff;        /* светло-серый бордер */
-    border-radius: 8px;            /* скруглённые углы */
+    border: 2px solid #4000ff;
+    border-radius: 8px;            
     padding: 12px 14px;
     font-size: 16px;
     width: 100%;
@@ -66,31 +66,68 @@ button:active {
     transform: scale(0.98);
 }
 
-fieldset[id="inKharkiv"] {
+.choose {
     margin-top: 2ch;
-    border: 2px solid #4000ff;        /* светло-серый бордер */
+    border: 2px solid #4000ff;        
     border-radius: 8px;
     padding: 12px 16px;
     font-size: 16px;
-    width: 100%;
+    width: 90%;
     max-width: 300px;
     outline: none;
     display: inline-flex;
+    flex-direction: column;
+    gap: 2ch;
 }
 
 label[id="contrname"] {
+    padding-top: 0.5ch;
     color: rgb(157, 157, 255);
     position: relative;
-    right: 3ch;
     font-size: medium;
     font-family: Arial;
-    width: 20ch;
+    width: 30ch;
 }
 
 .textLabel {
     color: rgb(157, 157, 255);
 }
 
-#checkbuttons {
-    display: inline-flex;
+.radios {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-left: 5%;
+}
+
+.radText {
+    position: relative;
+    bottom: 0.5vi;
+}
+
+input[type="radio"] {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.checkbuttons {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5ch;
+    padding-bottom: 1ch;
+}
+
+.secondinp {
+    position: relative;
+    bottom: 2.6ch;
+    right: inherit;
+    left: 1ch;
+    height: 3ch;
+    width: 15ch;
+}
+
+.tarea {
+    height: 7ch;
 }

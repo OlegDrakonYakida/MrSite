@@ -9,31 +9,75 @@
     <body>
         <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
         <div id="main">
-            <img id="Emblem" src="img/mr.jpg" alt="Эмблема Молодёжной рады">
+            <img id="Emblem" src="/img/mr.jpg" alt="Эмблема Молодёжной рады">
             <h1>Ласкаво просимо до Молодіжної Ради!</h1>
             <form id="registration">
                 <input id="NameInput" name="UserName" type="text" placeholder="Ваше П.І.Б" class="inputstyle">
                 <input id="birthdate" name="UserBirthday" type="text" placeholder="Дата народження" class="inputstyle" >
+                <input id="PhoneInput" name="UserUserNumberPhone" type="tel" placeholder="Контактний телефон" class="inputstyle" >
                 <input id="MailInput" name="UserMail" type="email" placeholder="Електрона пошта" class="inputstyle">
-                <fieldset id="inKharkiv">
-                    <label id="contrname" class="textLabel">Ти у Харкові на постійній основі?</label>
-                    <div id="checkbuttons">
-                        <div>
-                            <input id="Да" type="radio" name="question" value="Да" class="yesno"/>
-                            <label for="Да" class="textLabel">Да</label>
+                <fieldset id="inKharkiv" class="choose">
+                    <label id="contrname" class="textLabel">Чи перебуваєш ти в Харкові на постійній основі?</label>
+                    <div class="checkbuttons">
+                        <div class="radios">
+                            <input id="Так" type="radio" name="question" value="Так"/>
+                            <label for="Так" class="textLabel radText">Так</label>
                         </div>
-                        <div>
-                            <input id="Нет" type="radio" name="question" value="Нет" class="yesno"/>
-                            <label for="Нет" class="textLabel">Нет</label>
+                        <div class="radios">
+                            <input id="Ні" type="radio" name="question" value="Ні"/>
+                            <label for="Ні" class="textLabel radText">Ні</label>
                         </div>
                     </div>
                 </fieldset>
+                <input id="TgInput" name="UserTgName" type="text" placeholder="Контакт у Telegram через @" class="inputstyle">
+                <fieldset class="choose">
+                    <label id="contrname" class="textLabel">Звідки ти дізнався/дізналася про набір до Молодіжної ради?</label>
+                    <div class="radios">
+                        <input id="1q" type="radio" name="question2" value="З Instagram Молодіжної ради"/>
+                        <label for="1q" class="textLabel radText">З Instagram Молодіжної ради</label>
+                    </div>
+                    <div class="radios">
+                        <input id="2q" type="radio" name="question2" value="З Facebook Молодіжної ради"/>
+                        <label for="2q" class="textLabel radText">З Facebook Молодіжної ради</label>
+                    </div>
+                    <div class="radios">
+                        <input id="3q" type="radio" name="question2" value="З Telegram Молодіжної ради"/>
+                        <label for="3q" class="textLabel radText">З Telegram Молодіжної ради</label>
+                    </div>
+                    <div class="radios">
+                        <input id="4q" type="radio" name="question2" value="З Tik-Tok Молодіжної ради"/>
+                        <label for="4q" class="textLabel radText">З Tik-Tok Молодіжної ради</label>
+                    </div>
+                    <div class="radios">
+                        <input id="5q" type="radio" name="question2" value="З Instagram блогера або пабліка"/>
+                        <label for="5q" class="textLabel radText">З Instagram блогера або пабліка</label>
+                    </div>
+                    <div class="radios">
+                        <input id="6q" type="radio" name="question2" value="З інших ЗМІ"/>
+                        <label for="6q" class="textLabel radText">З інших ЗМІ</label>
+                    </div>
+                    <div class="radios">
+                        <input id="7q" type="radio" name="question2" value="Від знайомих або друзів"/>
+                        <label for="7q" class="textLabel radText">Від знайомих або друзів</label>
+                    </div>
+                    <div class="radios seconddiv">
+                        <input id="8q" type="radio" name="question2" value="Інше"/>
+                        <label for="8q" class="textLabel radText">Інше:</label>
+                        <input id="8qInput" type="text" for="8q" class="inputstyle secondinp">
+                    </div>
+                </fieldset>
+                <textarea id="Q1Input" name="UserQ1" type="text" placeholder="Що таке Молодіжна рада, на твою думку?" class="inputstyle tarea"></textarea>
+                <textarea id="Q2Input" name="UserQ2" type="text" placeholder="Чому ти хочеш потрапити до Молодіжної ради?" class="inputstyle tarea"></textarea>
+                <textarea id="Q3Input" name="UserQ3" type="text" placeholder="Який проєкт Молодіжної ради сподобався тобі найбільше? Чому саме він?" style="height: 8.8ch;" class="inputstyle tarea"></textarea>
+                <textarea id="Q4Input" name="UserQ4" type="text" placeholder="Як, на твою думку, Молодіжна рада взаємодіє з Харківською міською радою?" style="height: 8.8ch;" class="inputstyle tarea"></textarea>
+                <textarea id="Q5Input" name="UserQ5" type="text" placeholder="Якою діяльністю ти займаєшся, окрім навчання/роботи? Якщо * перебуваєш у складі інших організацій, вкажи їх назву." style="height: 12.5ch;" class="inputstyle tarea"></textarea>
             </form>
             <button id="sendButton">Надислати данi</button>
         </div>
+        <script src="https://unpkg.com/imask"></script>
         <script src="script.js"></script>
         <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
-        <script src="lib/ua.js"></script>
+        <script src="/lib/ua.js"></script>
         <script>
             flatpickr("#birthdate", {
                 "locale": "ru",
