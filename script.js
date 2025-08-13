@@ -26,7 +26,7 @@ sendDataButton.addEventListener("click", (e) => {
     let data = {
         name: registrationData.get("UserName") || "Имя не указано",
         date: registrationData.get("UserBirthday") || "Почта не указана",
-        phone: registrationData.get("PhoneInput") || "Номер не указан",
+        phone: registrationData.get("UserNumberPhone") || "Номер не указан",
         mail: registrationData.get("UserMail") || "Дата не указана",
         question: registrationData.get("question") || "Ответ не получен",
         tgname: registrationData.get("UserTgName") || "Контакт Telegram не указан",
