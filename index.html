@@ -4,75 +4,78 @@
         <title>SiteForTG</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="shortcut icon" href="img/mr.jpg">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
         <div id="main">
             <img id="Emblem" src="img/mr.jpg" alt="Эмблема Молодёжной рады">
-            <h1>Ласкаво просимо до Молодіжної Ради!</h1>
+            <h1>Ласкаво просимо до<br>Молодіжної Ради!</h1>
+            <p>Заповніть цю форму</p>
             <form id="registration">
-                <input id="NameInput" name="UserName" type="text" placeholder="Ваше П.І.Б" class="inputstyle">
-                <input id="birthdate" name="UserBirthday" type="text" placeholder="Дата народження" class="inputstyle" >
-                <input id="PhoneInput" name="UserNumberPhone" type="tel" placeholder="Контактний телефон" class="inputstyle" >
-                <input id="MailInput" name="UserMail" type="email" placeholder="Електронна пошта" class="inputstyle">
+                <input id="NameInput" name="UserName" type="text" placeholder="Ваше П.І.Б" class="inputstyle" required>
+                <input id="birthdate" name="UserBirthday" type="text" placeholder="Дата народження" class="inputstyle" required>
+                <input id="PhoneInput" name="UserNumberPhone" type="tel" placeholder="Контактний телефон" class="inputstyle" required>
+                <input id="MailInput" name="UserMail" type="email" placeholder="Електронна пошта" class="inputstyle" required>
                 <fieldset id="inKharkiv" class="choose">
-                    <label id="contrname" class="textLabel">Чи перебуваєш ти в Харкові на постійній основі?</label>
+                    <label id="contrname" class="textLabel">Чи перебуваєш ти у Харкові<br>на постійній основі?</label>
                     <div class="checkbuttons">
                         <div class="radios">
-                            <input id="Так" type="radio" name="question" value="Так"/>
+                            <input id="Так" type="radio" name="question" value="Так" required/>
                             <label for="Так" class="textLabel radText">Так</label>
                         </div>
                         <div class="radios">
-                            <input id="Ні" type="radio" name="question" value="Ні"/>
+                            <input id="Ні" type="radio" name="question" value="Ні" required/>
                             <label for="Ні" class="textLabel radText">Ні</label>
                         </div>
                     </div>
                 </fieldset>
-                <input id="TgInput" name="UserTgName" type="text" placeholder="Контакт у Telegram через @" class="inputstyle">
+                <input id="TgInput" name="UserTgName" type="text" placeholder="Контакт у Telegram через @" class="inputstyle" required>
                 <fieldset class="choose">
                     <label id="contrname" class="textLabel">Звідки ти дізнався/дізналася про набір до Молодіжної ради?</label>
                     <div class="radios">
-                        <input id="1q" type="radio" name="question2" value="З Instagram Молодіжної ради"/>
+                        <input id="1q" type="radio" name="question2" value="З Instagram Молодіжної ради" required/>
                         <label for="1q" class="textLabel radText">З Instagram Молодіжної ради</label>
                     </div>
                     <div class="radios">
-                        <input id="2q" type="radio" name="question2" value="З Facebook Молодіжної ради"/>
+                        <input id="2q" type="radio" name="question2" value="З Facebook Молодіжної ради" required/>
                         <label for="2q" class="textLabel radText">З Facebook Молодіжної ради</label>
                     </div>
                     <div class="radios">
-                        <input id="3q" type="radio" name="question2" value="З Telegram Молодіжної ради"/>
+                        <input id="3q" type="radio" name="question2" value="З Telegram Молодіжної ради" required/>
                         <label for="3q" class="textLabel radText">З Telegram Молодіжної ради</label>
                     </div>
                     <div class="radios">
-                        <input id="4q" type="radio" name="question2" value="З Tik-Tok Молодіжної ради"/>
+                        <input id="4q" type="radio" name="question2" value="З Tik-Tok Молодіжної ради" required/>
                         <label for="4q" class="textLabel radText">З Tik-Tok Молодіжної ради</label>
                     </div>
                     <div class="radios">
-                        <input id="5q" type="radio" name="question2" value="З Instagram блогера або пабліка"/>
-                        <label for="5q" class="textLabel radText">З Instagram блогера або пабліка</label>
+                        <input id="5q" type="radio" name="question2" value="З Instagram блогера або пабліка" required/>
+                        <label for="5q" class="textLabel radText">З Instagram блогера/пабліка</label>
                     </div>
                     <div class="radios">
-                        <input id="6q" type="radio" name="question2" value="З інших ЗМІ"/>
+                        <input id="6q" type="radio" name="question2" value="З інших ЗМІ" required/>
                         <label for="6q" class="textLabel radText">З інших ЗМІ</label>
                     </div>
                     <div class="radios">
-                        <input id="7q" type="radio" name="question2" value="Від знайомих або друзів"/>
+                        <input id="7q" type="radio" name="question2" value="Від знайомих або друзів" required/>
                         <label for="7q" class="textLabel radText">Від знайомих або друзів</label>
                     </div>
                     <div class="radios seconddiv">
-                        <input id="8q" type="radio" name="question2" value="Інше"/>
+                        <input id="8q" type="radio" name="question2" value="Інше" required/>
                         <label for="8q" class="textLabel radText">Інше:</label>
                         <input id="8qInput" type="text" for="8q" class="inputstyle secondinp">
                     </div>
                 </fieldset>
-                <textarea id="Q1Input" name="UserQ1" type="text" placeholder="Що таке Молодіжна рада, на твою думку?" class="inputstyle tarea"></textarea>
-                <textarea id="Q2Input" name="UserQ2" type="text" placeholder="Чому ти хочеш потрапити до Молодіжної ради?" class="inputstyle tarea"></textarea>
-                <textarea id="Q3Input" name="UserQ3" type="text" placeholder="Який проєкт Молодіжної ради сподобався тобі найбільше? Чому саме він?" style="height: 8.8ch;" class="inputstyle tarea"></textarea>
-                <textarea id="Q4Input" name="UserQ4" type="text" placeholder="Як, на твою думку, Молодіжна рада взаємодіє з Харківською міською радою?" style="height: 8.8ch;" class="inputstyle tarea"></textarea>
-                <textarea id="Q5Input" name="UserQ5" type="text" placeholder="Якою діяльністю ти займаєшся, окрім навчання/роботи? Якщо * перебуваєш у складі інших організацій, вкажи їх назву." style="height: 12.5ch;" class="inputstyle tarea"></textarea>
+                <textarea id="Q1Input" name="UserQ1" type="text" placeholder="Що таке Молодіжна рада, на твою думку?" class="inputstyle tarea" required></textarea>
+                <textarea id="Q2Input" name="UserQ2" type="text" placeholder="Чому ти хочеш потрапити до Молодіжної ради?" class="inputstyle tarea" required></textarea>
+                <textarea id="Q3Input" name="UserQ3" type="text" placeholder="Який проєкт Молодіжної ради сподобався тобі найбільше? Чому саме він?" style="height: 8.8ch;" class="inputstyle tarea" required></textarea>
+                <textarea id="Q4Input" name="UserQ4" type="text" placeholder="Як, на твою думку, Молодіжна рада взаємодіє з Харківською міською радою?" style="height: 8.8ch;" class="inputstyle tarea" required></textarea>
+                <textarea id="Q5Input" name="UserQ5" type="text" placeholder="Якою діяльністю ти займаєшся, окрім навчання/роботи? Якщо перебуваєш у складі інших організацій, вкажи їх назву." style="height: 12.5ch;" class="inputstyle tarea" required></textarea>
+                <button id="sendButton" type="submit">Надислати данi</button>
             </form>
-            <button id="sendButton">Надислати данi</button>
+            <!-- <button id="sendButton">Надислати данi</button> -->
         </div>
         <script src="https://unpkg.com/imask"></script>
         <script src="script.js"></script>
