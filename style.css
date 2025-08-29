@@ -96,7 +96,7 @@ input[type='radio'] { /* Стили радиокнопок */
 }
 
 input[type='radio']:checked {
-    border: 6px solid lightblue;
+    border: 6px solid #4000ff;
 }
 
 .choose {
