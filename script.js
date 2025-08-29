@@ -31,7 +31,7 @@ form.addEventListener("submit", (e) => {
         question: registrationData.get("question") || "Ответ не получен",
         tgname: registrationData.get("UserTgName") || "Контакт Telegram не указан",
         question2: registrationData.get("question2") || "Ответ не получен",
-        tqOne: registrationData.get("UserQ1") || "Ответ не получен",
+        tgOne: registrationData.get("UserQ1") || "Ответ не получен",
         tgTwo: registrationData.get("UserQ2") || "Ответ не получен",
         tgThree: registrationData.get("UserQ3") || "Ответ не получен",
         tgFour: registrationData.get("UserQ4") || "Ответ не получен",
